@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">RU Cafe</string>
     <string name="title_name">RU Cafe</string>
+    <string name="coffee_name">Order Coffee</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="coffee1">Sweet Cream</string>
+    <string name="coffee2">French Vanilla</string>
+    <string name="coffee3">Irish Cream</string>
+    <string name="coffee4">Caramel</string>
+    <string name="coffee5">Mocha</string>
+    <string name="submitButton">Add to Order</string>
+    <string name="money">$0.00</string>
+
 </resources>
