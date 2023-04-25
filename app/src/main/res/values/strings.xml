@@ -10,5 +10,7 @@
     <string name="coffee5">Mocha</string>
     <string name="submitButton">Add to Order</string>
     <string name="money">$0.00</string>
+    <string name="orderButton">Place Order</string>
+    <string name="order_title">Your Order</string>
 
 </resources>

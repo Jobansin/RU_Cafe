@@ -24,6 +24,9 @@
         <activity
             android:name=".CoffeeActivity">
         </activity>
+        <activity
+            android:name=".CartActivity">
+        </activity>
     </application>
 
 </manifest>

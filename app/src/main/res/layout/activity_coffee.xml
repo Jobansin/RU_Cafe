@@ -157,7 +157,7 @@
 
     <Button
         android:id="@+id/coffeeButton"
-        android:layout_width="256dp"
+        android:layout_width="375dp"
         android:layout_height="58dp"
         android:text="@string/submitButton"
         app:layout_constraintStart_toStartOf="parent"

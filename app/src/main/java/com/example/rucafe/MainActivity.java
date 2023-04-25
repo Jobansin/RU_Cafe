@@ -18,4 +18,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CoffeeActivity.class);
         startActivity(intent);
     }
+
+    public void getCartView(View view) {
+        Intent intent = new Intent(this, CartActivity.class);
+        startActivity(intent);
+    }
+
+    public void getDonutView(View view) {
+        Intent intent = new Intent(this, DonutActivity.class);
+        startActivity(intent);
+    }
 }
