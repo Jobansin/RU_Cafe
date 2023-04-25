@@ -27,6 +27,9 @@
         <activity
             android:name=".CartActivity">
         </activity>
+        <activity
+            android:name=".DonutActivity">
+        </activity>
     </application>
 
 </manifest>
