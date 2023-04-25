@@ -37,43 +37,45 @@
         android:id="@+id/coffee1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/coffee1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/coffee2"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:onClick="changePrice"
+        android:text="@string/coffee1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/coffee2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/coffee2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/coffee2"
-        app:layout_constraintStart_toEndOf="@+id/coffee1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:onClick="changePrice"
+
+        android:text="@string/coffee2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coffee1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/coffee3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/coffee3"
-        app:layout_constraintStart_toEndOf="@+id/coffee2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:onClick="changePrice"
+        android:text="@string/coffee3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coffee2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/coffee4"
@@ -82,23 +84,23 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coffee3"
+        android:onClick="changePrice"
+        android:text="@string/coffee4"
         app:layout_constraintEnd_toStartOf="@+id/coffee5"
-        android:text="@string/coffee4" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coffee3" />
 
     <CheckBox
         android:id="@+id/coffee5"
-        android:text="@string/coffee5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintStart_toEndOf="@+id/coffee4"
+        android:onClick="changePrice"
+        android:text="@string/coffee5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coffee4"
         app:layout_constraintTop_toBottomOf="@+id/coffee3" />
 
 
@@ -159,11 +161,12 @@
         android:id="@+id/coffeeButton"
         android:layout_width="375dp"
         android:layout_height="58dp"
+        android:layout_marginTop="70dp"
+        android:onClick="addCoffee"
         android:text="@string/submitButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coffeeSizes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="70dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coffeeSizes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
