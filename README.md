@@ -5,3 +5,4 @@
 - **Backend**: David Harianto
 - **Topics covered**: OOP, Polymorphism, Android App Development
 - Developed using Android Studio
+- A simple Android application that allows users to order coffee and donuts, as well as being able to place an order and editing it
