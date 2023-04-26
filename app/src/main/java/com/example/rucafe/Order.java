@@ -48,4 +48,17 @@ public class Order {
     public int getNumber() {
         return orderNumber;
     }
+
+    /**
+     * This method returns the order contents.
+     * @return String
+     */
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        str.append("Order #" + orderNumber + "\n");
+        for(MenuItem item: basket) {
+            str.append(item + "\n");
+        }
+        return str.toString();
+    }
 }

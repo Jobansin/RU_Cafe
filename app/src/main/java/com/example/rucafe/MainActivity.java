@@ -1,5 +1,7 @@
 package com.example.rucafe;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -26,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void getDonutView(View view) {
         Intent intent = new Intent(this, DonutActivity.class);
+        startActivity(intent);
+    }
+
+    public void getOrderView(View view) {
+        Intent intent = new Intent(this, OrdersActivity.class);
         startActivity(intent);
     }
 }

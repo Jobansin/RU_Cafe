@@ -12,5 +12,11 @@
     <string name="money">$0.00</string>
     <string name="orderButton">Place Order</string>
     <string name="order_title">Your Order</string>
+    <string name="storeOrderTitle">Store Orders</string>
+    <string name="donut_name">Order Donuts</string>
+    <string name="add_to_cart_text">Add to Cart</string>
+    <string name="salesTax">Sales Tax</string>
+    <string name="total">Total</string>
+
 
 </resources>

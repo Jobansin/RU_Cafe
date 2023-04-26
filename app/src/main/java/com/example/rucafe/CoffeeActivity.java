@@ -112,6 +112,7 @@ public class CoffeeActivity extends AppCompatActivity {
                 CartActivity.cart.add(coffeeOrder);
                 coffeeSizes.setSelection(0);
                 coffeeAmt.setSelection(0);
+                changePrice(view);
                 Toast.makeText(getApplicationContext(), "Coffee added to order.", Toast.LENGTH_SHORT).show();
             }
         }).setNegativeButton("No", new DialogInterface.OnClickListener() {

@@ -22,13 +22,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CoffeeActivity">
+            android:name=".CoffeeActivity"
+            android:parentActivityName=".MainActivity">
+
         </activity>
         <activity
-            android:name=".CartActivity">
+            android:name=".CartActivity"
+            android:parentActivityName=".MainActivity">
         </activity>
         <activity
-            android:name=".DonutActivity">
+            android:name=".DonutActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+            android:name=".OrdersActivity"
+            android:parentActivityName=".MainActivity">
         </activity>
     </application>
 
