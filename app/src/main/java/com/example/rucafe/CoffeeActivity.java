@@ -16,6 +16,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+/**
+ * This activity allows users to order coffee and customize their options.
+ * @author David Harianto
+ * @author Joban Singh
+ */
 public class CoffeeActivity extends AppCompatActivity {
     private Spinner coffeeSizes;
     private Spinner coffeeAmt;
@@ -29,6 +34,12 @@ public class CoffeeActivity extends AppCompatActivity {
     private static final double VENTI_COFFEE = 3.09;
     private static final double ADDINS_COST = 0.30;
 
+    /**
+     * Called when the activity is starting or restarting.
+     * Initializes the activity and sets up the necessary views and adapters.
+     *
+     * @param savedInstanceState The saved instance state.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +69,9 @@ public class CoffeeActivity extends AppCompatActivity {
         coffeeSubtotal.setText("$" + SHORT_COFFEE);
     }
 
+    /**
+     * Sets listeners for the coffee size and amount spinners.
+     */
     public void coffeeListener() {
         coffeeSizes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -81,6 +95,12 @@ public class CoffeeActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Adds the selected coffee to the cart when the "Add to Cart" button is clicked.
+     * Displays a confirmation dialog before adding.
+     *
+     * @param view The current view.
+     */
     public void addCoffee(View view) {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Confirm Coffee Order");
@@ -124,6 +144,11 @@ public class CoffeeActivity extends AppCompatActivity {
         dialog.show();
     }
 
+    /**
+     * Calculates and updates the total price based on the selected coffee size, amount, and add-ins.
+     *
+     * @param view The current view.
+     */
     public void changePrice(View view) {
         double total = 0, price = 0;
         if(coffeeSizes.getSelectedItem().toString().equals("Short")) {

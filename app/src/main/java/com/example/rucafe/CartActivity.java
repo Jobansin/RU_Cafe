@@ -15,6 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+/**
+ * Represents the activity that manages the shopping cart functionality and order placement.
+ * @author David Harianto
+ * @author Joban Singh
+ */
 public class CartActivity extends AppCompatActivity {
 
     private ListView orders;
@@ -26,6 +31,11 @@ public class CartActivity extends AppCompatActivity {
     private static final double NJ_TAX = 0.06625;
     ArrayAdapter<MenuItem> allItems;
 
+    /**
+     * Initializes the activity and sets up the necessary views and adapters.
+     *
+     * @param savedInstanceState The saved instance state.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +50,11 @@ public class CartActivity extends AppCompatActivity {
         deleteItem(allItems);
     }
 
+    /**
+     * Sets up the item deletion functionality for the ListView.
+     *
+     * @param adapter The ArrayAdapter used to display the cart items.
+     */
     public void deleteItem(ArrayAdapter<MenuItem> adapter) {
         orders.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -65,6 +80,9 @@ public class CartActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Calculates and updates the subtotal, tax, and total prices based on the items in the cart.
+     */
     public void calculatePrices() {
         double price = 0;
         if(cart.size() > 0) {
@@ -84,12 +102,24 @@ public class CartActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Handles the order placement process, including confirmation and updating the order list.
+     *
+     * @param view The current view.
+     */
     public void placeOrder(View view) {
         if(cart.size() > 0) {
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.setTitle("Confirm Order.");
             alert.setMessage("Place Order?");
             alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                /**
+                 * Called when the positive button of the dialog is clicked. Creates a new order, adds it to the list of orders,
+                 * clears the cart, updates the adapter, recalculates prices, and displays a toast message.
+                 *
+                 * @param dialog The dialog that received the click.
+                 * @param id     The button that was clicked.
+                 */
                 public void onClick(DialogInterface dialog, int id) {
                     ArrayList<MenuItem> menuItems = new ArrayList<>(cart);
                     int orderNumber = OrdersActivity.orders.size() > 0 ? OrdersActivity.orders.get(OrdersActivity.orders.size() - 1).getNumber() : 0;
@@ -101,6 +131,12 @@ public class CartActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Order has been placed.", Toast.LENGTH_SHORT).show();
                 }
             }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                /**
+                 * Called when the negative button of the dialog is clicked. Displays a toast message indicating that the order was canceled.
+                 *
+                 * @param dialog The dialog that received the click.
+                 * @param which  The button that was clicked.
+                 */
                 public void onClick(DialogInterface dialog, int which) {
                     Toast.makeText(getApplicationContext(), "Order was canceled.", Toast.LENGTH_LONG).show();
                 }

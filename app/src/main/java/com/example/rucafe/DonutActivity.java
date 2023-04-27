@@ -9,6 +9,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+/**
+ * Represents the activity for displaying and selecting donut items.
+ * @author David Harianto
+ * @author Joban Singh
+ */
 public class DonutActivity extends AppCompatActivity {
 
     private ArrayList<DonutCharacteristics> donuts = new ArrayList<>();
@@ -19,7 +24,11 @@ public class DonutActivity extends AppCompatActivity {
     private String [] donutNames = {"Glazed", "Jelly", "Strawberry Frosted", "Sugar", "Chocolate Frosted", "Lemon-filled",
             "Original Cake", "Blueberry Cake", "Cinnamon Sugar Cake", "Chocolate", "Powdered", "Butternut"};
 
-
+    /**
+     * Called when the activity is created. Initializes the layout and sets up the donut menu items.
+     *
+     * @param savedInstanceState The saved instance state bundle.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +40,9 @@ public class DonutActivity extends AppCompatActivity {
         donut_recycler_view.setLayoutManager(new LinearLayoutManager(this));
     }
 
+    /**
+     * Sets up the menu items by populating the `donuts` list with donut characteristics.
+     */
     private void setupMenuItems() {
         for(int i = 0; i < donutNames.length; i++) {
             if(i < 6) {

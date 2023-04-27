@@ -21,16 +21,37 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * This is an Adapter class to be used to instantiate an adapter for the RecyclerView.
+ * Must extend RecyclerView.Adapter, which will enforce you to implement 3 methods:
+ *      1. onCreateViewHolder, 2. onBindViewHolder, and 3. getItemCount
+ * @author David Harianto
+ * @author Joban Singh
+ */
+
 public class DonutAdapter extends RecyclerView.Adapter<DonutAdapter.DonutHolder> {
 
     private Context context;
     private ArrayList<DonutCharacteristics> donuts;
 
+    /**
+     * This creates an object of the DonutAdapter class
+     * @param context
+     * @param donuts
+     */
     public DonutAdapter(Context context, ArrayList<DonutCharacteristics> donuts) {
         this.context = context;
         this.donuts = donuts;
     }
 
+    /**
+     * This method will inflate the row layout for the items in the RecyclerView
+     * @param parent The ViewGroup into which the new View will be added after it is bound to
+     *               an adapter position.
+     * @param viewType The view type of the new View.
+     *
+     * @return
+     */
     @NonNull
     @Override
     public DonutHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -39,6 +60,12 @@ public class DonutAdapter extends RecyclerView.Adapter<DonutAdapter.DonutHolder>
         return new DonutHolder(view);
     }
 
+    /**
+     * Assign data values for each row according to their "position" (index) when the item becomes
+     * visible on the screen.
+     * @param holder the instance of ItemsHolder
+     * @param position the index of the item in the list of items
+     */
     @Override
     public void onBindViewHolder(@NonNull DonutHolder holder, int position) {
         holder.donutName.setText(donuts.get(position).getItemName());
@@ -46,11 +73,18 @@ public class DonutAdapter extends RecyclerView.Adapter<DonutAdapter.DonutHolder>
         holder.donutImage.setImageResource(donuts.get(position).getImage());
     }
 
+    /**
+     * Get the number of items in the ArrayList.
+     * @return the number of items in the list.
+     */
     @Override
     public int getItemCount() {
         return donuts.size();
     }
 
+    /**
+     * Get the views from the row layout file, similar to the onCreate() method.
+     */
     public static class DonutHolder extends RecyclerView.ViewHolder {
 
         private TextView donutName, donutPrice;
@@ -60,6 +94,10 @@ public class DonutAdapter extends RecyclerView.Adapter<DonutAdapter.DonutHolder>
         private ArrayList<String> quantity = new ArrayList<>();
         private ConstraintLayout parentLayout;
 
+        /**
+         * Instantiates a DonutHolder Object
+         * @param itemView
+         */
         public DonutHolder(@NonNull View itemView) {
             super(itemView);
             donutName = itemView.findViewById(R.id.donutName);
@@ -79,6 +117,11 @@ public class DonutAdapter extends RecyclerView.Adapter<DonutAdapter.DonutHolder>
             setAddButtonOnClick(itemView);
         }
 
+        /**
+         * Set the onClickListener for the button on each row.
+         * Clicking on the button will create an AlertDialog with the options of YES/NO.
+         * @param itemView
+         */
         private void setAddButtonOnClick(@NonNull View itemView) {
             addButton.setOnClickListener(new View.OnClickListener() {
                 @Override
