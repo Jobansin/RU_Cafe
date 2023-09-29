@@ -1,8 +1,6 @@
 # Project 5 for Software Methodology Class
 
-- **A coffee and donut ordering system that allows users to add different types of coffee, and also different types of donuts to their cart. Users can also remove items from their cart. Once they are finished with their order, they can place it and view all orders that have been placed in the order view. They also have the option to delete orders from the order view.**
-- Worked with Joban Singh (@Jobansin) to complete this project for our Software Methodology Class (Rutgers 01:198:213)
-- **Frontend**: Joban Singh
-- **Backend**: David Harianto
+- **An efficient coffee and donut ordering platform empowering users to seamlessly customize their selections by adding various coffee options and an array of delectable donuts to their shopping cart. Our user-friendly system also grants the flexibility to remove items from the cart at will. Upon completing their order, customers can effortlessly place it and access a comprehensive order history view, where they can conveniently review all placed orders. Furthermore, they retain the option to delete orders from this order history view, providing an added level of control and convenience.**
+- Worked with David Harianto (@david44868) to complete this project for our Software Methodology Class (Rutgers 01:198:213)
 - **Topics covered**: OOP, Polymorphism, Android App Development
 - Developed using Android Studio
